@@ -1,6 +1,6 @@
 # Single Stage Virtual Try-on via Deformable Attention Flows
 
-**Official code for ECCV2022 paper "Single Stage Virtual Try-on via Deformable Attention Flows"**
+**Official code for ECCV2022 paper "[Single Stage Virtual Try-on via Deformable Attention Flows](https://arxiv.org/abs/2207.09161)"**
 
 <p align="center">
     <br>
@@ -23,8 +23,11 @@ We propose a single-stage try-on framework by developing a novel Deformable Atte
 ## Inference
 
 Paired setting: In the paired setting, we have ground truth images.
+
 `python -u test_SDAFNet_viton.py -b 8 --name TEST_PAIR --mode test --dataset_list VITON/test_pairs.txt`
+
 Unpaired setting: In the unpaired setting, we do not have ground truth images. The `test_unpairs.txt` is same with [CPVTON-plus](https://github.com/minar09/cp-vton-plus/blob/master/data/test_pairs.txt) and [PFAFN](https://github.com/geyuying/PF-AFN)
+
 `python -u test_SDAFNet_viton.py -b 8 --name TEST_UNPAIR --mode test --dataset_list VITON/test_unpairs.txt`
 
 ## Train
