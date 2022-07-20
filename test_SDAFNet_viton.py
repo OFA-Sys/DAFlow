@@ -4,7 +4,6 @@ import torch.backends.cudnn as cudnn
 import torch
 from torch import nn
 from torch.nn import functional as F
-import torchgeometry as tgm
 import tqdm
 import numpy as np
 from PIL import Image
@@ -60,9 +59,9 @@ def test(opt, net):
             tryon_result = net(ref_input, cloth_img, img_agnostic).detach()
             for j in range(tryon_result.shape[0]):
                 save_image(tryon_result[j:j+1], os.path.join(opt.save_dir, opt.name, "vis_viton_out", img_names[j]), nrow=1, normalize=True, range=(-1,1))
-            #if opt.add_compare:
-            #    tryon_result = torch.cat([img_agnostic, cloth_img, tryon_result],2)
-            #save_image(tryon_result, os.path.join("vis_viton_sup", "%d.jpg"%i), nrow=10, normalize=True, range=(-1,1))
+            if opt.add_compare:
+                tryon_result = torch.cat([img_agnostic, cloth_img, tryon_result],2)
+                save_image(tryon_result, os.path.join(opt.save_dir, opt.name, "vis_viton_out", img_names[0]), nrow=10, normalize=True, range=(-1,1))
 
 def main():
     opt = get_opt()
