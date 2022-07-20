@@ -40,7 +40,7 @@ Download the [checkpoint](https://www.mde),  which gets higher scores than repor
 
 Paired setting. SSIM: 0.8539 using the pytorch SSIM repo. https://github.com/Po-Hsun-Su/pytorch-ssim
 
-UnPaired setting. FID: 10.55  using the implementation toevaluate. https://github.com/toshas/torch-fidelity
+UnPaired setting. FID: 10.55 using the implementation to evaluate. https://github.com/toshas/torch-fidelity
 
 ## Results
 - VITON dataset
