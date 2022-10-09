@@ -19,6 +19,13 @@ We propose a single-stage try-on framework by developing a novel Deformable Atte
 - pytorch1.7
 - torchvision 0.8
 
+The data process scripts in `data/data_process`, the original data is from [CPVTON-plus](https://github.com/minar09/cp-vton-plus/). Unzip the `viton_plus.zip` from CPVTON-plus.
+
+Drawing img_agnostic: 
+`python get_img_agnostic.py --data_path img_path --data_txt data.txt`
+
+Drawing skeleton img (json file as the openpose format):
+`python draw_keypoints.py --json_path json_files_path --save_path save_path`
 
 ## Inference
 
